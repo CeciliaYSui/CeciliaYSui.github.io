@@ -1,0 +1,459 @@
+/* ================================================
+   Cecilia Y. Sui — Academic Website
+   Custom CSS
+   ================================================ */
+
+:root {
+  --navy:       #1d3557;
+  --steel:      #457b9d;
+  --text:       #2c2c2c;
+  --muted:      #6c757d;
+  --border:     #dee2e6;
+  --bg-light:   #f8f9fa;
+  --white:      #ffffff;
+}
+
+/* ===== BASE ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.75;
+  background: var(--white);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Lora', serif;
+  color: var(--navy);
+}
+
+a {
+  color: var(--steel);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* ===== NAVBAR ===== */
+#mainNav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#mainNav .navbar-brand {
+  font-family: 'Lora', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  letter-spacing: 0.02em;
+}
+
+#mainNav .navbar-brand:hover {
+  text-decoration: none;
+}
+
+#mainNav .nav-link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  padding: 0.4rem 0.9rem !important;
+  transition: color 0.2s ease;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+  color: var(--navy) !important;
+  text-decoration: none;
+}
+
+#mainNav .navbar-toggler {
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.75rem;
+  color: var(--muted);
+}
+
+#mainNav .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.page-header .subheading {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* ===== HOME — PROFILE SECTION ===== */
+.profile-section {
+  padding: 4rem 0 3rem;
+}
+
+.profile-card {
+  text-align: center;
+  padding-right: 2.5rem;
+  border-right: 1px solid var(--border);
+}
+
+@media (max-width: 767px) {
+  .profile-card {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.profile-photo {
+  width: 170px;
+  height: 210px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 4px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-card .profile-name {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+
+.profile-card .profile-title {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.profile-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.profile-links li {
+  margin-bottom: 0.55rem;
+}
+
+.profile-links a {
+  font-size: 0.82rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition: color 0.2s;
+}
+
+.profile-links a:hover {
+  color: var(--steel);
+  text-decoration: none;
+}
+
+.profile-links i {
+  width: 15px;
+  text-align: center;
+  color: var(--steel);
+  flex-shrink: 0;
+}
+
+/* ===== HOME — BIO SECTION ===== */
+.bio-section {
+  padding-left: 3rem;
+}
+
+@media (max-width: 767px) {
+  .bio-section {
+    padding-left: 0;
+  }
+}
+
+.bio-section h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.bio-section .subtitle {
+  color: var(--steel);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+.bio-text p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.research-tag {
+  background: var(--bg-light);
+  color: var(--navy);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* ===== SECTION HEADINGS (Research / Teaching) ===== */
+.section-title {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 2.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--navy);
+}
+
+.section-title:first-of-type {
+  margin-top: 0;
+}
+
+/* ===== RESEARCH — PAPER LIST ===== */
+.paper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paper-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.paper-item:last-child {
+  border-bottom: none;
+}
+
+.paper-title {
+  font-family: 'Lora', serif;
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.paper-title a {
+  color: var(--navy);
+}
+
+.paper-title a:hover {
+  color: var(--steel);
+}
+
+.paper-authors {
+  font-size: 0.865rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.paper-status {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.18rem 0.65rem;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.status-accepted {
+  background: #d8f3dc;
+  color: #1b4332;
+}
+
+.status-review {
+  background: #dde8f0;
+  color: #1d3557;
+}
+
+.status-progress {
+  background: var(--bg-light);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+/* ===== TEACHING — COURSE LIST ===== */
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.course-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.1rem;
+}
+
+.course-name a {
+  color: var(--text);
+}
+
+.course-name a:hover {
+  color: var(--steel);
+}
+
+.course-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.course-date {
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+.contact-list .contact-icon {
+  color: var(--steel);
+  font-size: 1rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+
+.contact-value {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ===== CV PAGE ===== */
+.cv-section {
+  padding: 3rem 0;
+}
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--navy);
+  color: var(--white) !important;
+  padding: 0.7rem 1.75rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background 0.2s ease;
+  text-decoration: none !important;
+  margin-bottom: 2.25rem;
+}
+
+.cv-download-btn:hover {
+  background: var(--steel);
+}
+
+.cv-embed {
+  width: 100%;
+  height: 850px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 5rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-text {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
+  margin: 0;
+}
