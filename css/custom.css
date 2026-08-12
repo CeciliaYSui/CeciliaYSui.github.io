@@ -294,6 +294,13 @@ a:hover {
   margin-bottom: 0.4rem;
 }
 
+.paper-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
 .paper-status {
   display: inline-block;
   font-size: 0.7rem;
@@ -318,6 +325,52 @@ a:hover {
   background: var(--bg-light);
   color: var(--muted);
   border: 1px solid var(--border);
+}
+
+.status-jmp {
+  background: #fff3cd;
+  color: #7a5c00;
+}
+
+.abstract-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0;
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--steel);
+  cursor: pointer;
+}
+
+.abstract-toggle:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.abstract-toggle i {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.abstract-toggle[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+.abstract-text {
+  font-size: 0.875rem;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 /* ===== TEACHING — COURSE LIST ===== */
