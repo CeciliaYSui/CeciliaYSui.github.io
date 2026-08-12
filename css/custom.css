@@ -335,26 +335,36 @@ a:hover {
 .abstract-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: 0.5rem;
-  padding: 0.2rem 0;
-  background: none;
-  border: none;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  padding: 0.32rem 0.9rem;
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--steel);
   cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .abstract-toggle:hover {
-  color: var(--navy);
-  text-decoration: underline;
+  background: var(--steel);
+  border-color: var(--steel);
+  color: var(--white);
 }
 
 .abstract-toggle i {
-  font-size: 0.7rem;
-  transition: transform 0.2s ease;
+  font-size: 0.65rem;
+  transition: transform 0.25s ease;
+}
+
+.abstract-toggle[aria-expanded="true"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
 }
 
 .abstract-toggle[aria-expanded="true"] i {
@@ -363,13 +373,14 @@ a:hover {
 
 .abstract-text {
   font-size: 0.875rem;
+  font-style: italic;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
   background: var(--bg-light);
-  border: 1px solid var(--border);
+  border-left: 3px solid var(--steel);
   border-radius: 4px;
-  padding: 0.85rem 1rem;
-  margin-top: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin-top: 0.75rem;
   margin-bottom: 0;
 }
 
